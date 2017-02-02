@@ -6,7 +6,7 @@ class myFrame(wx.Frame):
   def __init__(self):
     wx.Frame.__init__(self, None, -1, 'My Frame')
     
-    self.hm = pyHook.HookManager()
+    self.hm = PyHook3.HookManager()
     self.hm.MouseAllButtonsDown = self.OnMouseEvent
     self.hm.KeyDown = self.OnKeyboardEvent
   

@@ -36,7 +36,7 @@ def OnKeyboardEvent(event):
   return True
 
 # create the hook mananger
-hm = pyHook.HookManager()
+hm = PyHook3.HookManager()
 # register two callbacks
 hm.MouseAllButtonsDown = OnMouseEvent
 hm.KeyDown = OnKeyboardEvent
