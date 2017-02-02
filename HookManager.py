@@ -1,4 +1,4 @@
-import cpyHook
+import PyHook3.cpyHook as cpyHook
 
 def GetKeyState(key_id):
   return cpyHook.cGetKeyState(key_id)

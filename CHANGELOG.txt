@@ -1,4 +1,12 @@
-pyHook Change Log
+PyHook3 Change Log
+
+
+----------
+1.6.0 (2017-02-02)
+
+- Support of Python 3.x
+- Usage of Unicode to avoid crashes with international keyboards and window names
+
 
 ----------
 1.5.1 (2008-10-07)

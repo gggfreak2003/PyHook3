@@ -1,5 +1,5 @@
 import wx
-import pyHook
+import PyHook3
 from pyAA import *
   
 class myFrame(wx.Frame):
@@ -21,42 +21,42 @@ class myFrame(wx.Frame):
     elif event.Type == 'mouse':
       ao = AccessibleObjectFromPoint(event.Position)
 
-    print 
-    print '---------------------------'
-    print 'Event:'
-    print ' ',event.MessageName
-    print '  Window:', event.WindowName
+    print()
+    print('---------------------------')
+    print('Event:')
+    print(' ',event.MessageName)
+    print('  Window:', event.WindowName)
     if event.Type == 'keyboard':
-      print '  Key:',event.Key
-    print
-    print 'Object:'
+      print('  Key:',event.Key)
+    print()
+    print('Object:')
     try:
-      print '  Name:', ao.Name
+      print('  Name:', ao.Name)
     except:
-      print
+      print()
     
     try:
-      print '  Value:', ao.Value
+      print('  Value:', ao.Value)
     except:
-      print
+      print()
 
     try:
-      print '  Role:', ao.RoleText
+      print('  Role:', ao.RoleText)
     except:
-      print
+      print()
     
     try:
-      print '  Description:', ao.Description
+      print('  Description:', ao.Description)
     except:
-      print
+      print()
     
     try:
-      print '  State:', ao.StateText
+      print('  State:', ao.StateText)
     except:
-      print
+      print()
       
     try:
-      print '  Shortcut:', ao.KeyboardShortcut
+      print('  Shortcut:', ao.KeyboardShortcut)
     except:
       print
     
