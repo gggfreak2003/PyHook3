@@ -1,6 +1,11 @@
 MIT License
 
-Copyright (c) 2017 
+Copyright (c) 2003 Peter Parente
+Copyright (c) 2017 Markus Dod
+
+Copyright for portions of project PyHook3 are held by Peter Parente, 2003 
+as part of project pyHook. All other copyright for project PyHook3 are held 
+by Markus Dod, 2017.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
