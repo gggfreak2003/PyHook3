@@ -19,7 +19,7 @@ Works with Python 3.x
 
 
 ##Website
--------
+
 Visit https://github.com/gggfreak2003/PyHook3 for binaries, documentation, and tutorials.
 
 Bug reports and feature requests should be reported via the github page at
