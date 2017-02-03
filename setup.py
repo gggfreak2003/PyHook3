@@ -24,7 +24,7 @@ doclines = __doc__.split('\n')
 
 setup(name='PyHook3',
       version='1.6.0',
-      author='Peter Parente',
+      author='Peter Parente, Markus Dod',
       author_email='mdod@hs-mittweida.de',
       url='https://github.com/gggfreak2003/PyHook3',
       download_url='https://github.com/gggfreak2003/PyHook3',
@@ -36,5 +36,5 @@ setup(name='PyHook3',
       packages = ['PyHook3'],
       package_dir = {'PyHook3' : ""},
       ext_modules = [Extension('PyHook3._cpyHook', ['cpyHook.i'], libraries=libs)],
-      data_files=[('Lib/site-packages/PyHook3', ['LICENSE.txt', 'README.txt', 'CHANGELOG.txt'])]
+      data_files=[('Lib/site-packages/PyHook3', ['LICENSE', 'README.md', 'CHANGELOG.txt'])]
       )
