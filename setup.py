@@ -7,34 +7,45 @@ like the time of the event, the name of the window in which the event occurred, 
 event, any keyboard modifiers, etc.
 '''
 
-classifiers = """\
-Development Status :: 5 - Production/Stable
-Intended Audience :: Developers
-License :: OSI Approved :: MIT License
-Programming Language :: Python
-Topic :: System :: Monitoring
-Topic :: Software Development :: Libraries :: Python Modules
-Operating System :: Microsoft :: Windows
-"""
+from setuptools import setup, find_packages, Extension
+from codecs import open
+from os import path
 
-from distutils.core import setup, Extension
+here = path.abspath(path.dirname(__file__))
 
-libs = ['user32']
-doclines = __doc__.split('\n')
+# Get the long description from the README file
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+  long_description = f.read()
 
-setup(name='PyHook3',
-      version='1.6.0',
-      author='Peter Parente, Markus Dod',
-      author_email='mdod@hs-mittweida.de',
-      url='https://github.com/gggfreak2003/PyHook3',
-      download_url='https://github.com/gggfreak2003/PyHook3',
-      license='http://www.opensource.org/licenses/mit-license.php',
-      platforms=['Win32'],
-      description = doclines[0],
-      classifiers = filter(None, classifiers.split('\n')),
-      long_description = ' '.join(doclines[2:]),
-      packages = ['PyHook3'],
-      package_dir = {'PyHook3' : ""},
-      ext_modules = [Extension('PyHook3._cpyHook', ['cpyHook.i'], libraries=libs)],
-      data_files=[('Lib/site-packages/PyHook3', ['LICENSE', 'README.md', 'CHANGELOG.txt'])]
-      )
+setup(
+    name='PyHook3',
+    version='1.6.0',
+
+    description='Python wrapper for out-of-context input hooks in Windows',
+    long_description=long_description,
+    url='https://github.com/gggfreak2003/PyHook3',
+    author='Peter Parente, Markus Dod',
+    author_email='mdod@hs-mittweida.de',
+    license='MIT',
+
+    classifiers=[
+        'Development Status :: 5 - Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Topic :: System :: Monitoring',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Operating System :: Microsoft :: Windows'
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+    ],
+
+    packages = ['PyHook3'],
+    package_dir = {'PyHook3' : ""},
+    ext_modules = [Extension('PyHook3._cpyHook', ['cpyHook.i'], libraries=['user32'])],
+    data_files=[('Lib/site-packages/PyHook3', ['LICENSE.rst', 'README.rst', 'CHANGELOG.txt'])]
+)
